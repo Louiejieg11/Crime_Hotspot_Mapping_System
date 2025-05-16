@@ -33,8 +33,8 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {role === "null" && <Login onLogIn={handleLogin} />}
-      {role === null && <Navigation role={role} onLogOut={handleLogout}  />}
+      {role === null && <Login onLogIn={handleLogin} />}
+      {role === "user" && <Navigation role={role} onLogOut={handleLogout}  />}
       {role === "louiejie" && <Navigation role={role} onLogOut={handleLogout} />}
       {role === "admin" && <Admin onLogOut={handleLogout} />}
 
